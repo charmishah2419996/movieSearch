@@ -75,11 +75,11 @@ class MovieSearch extends Component {
                         <input type="text" name="name" className="alignTitleip" onChange={this.handleChange} placeholder="Search movie by title"/>
                     </div>
                     {this.state.searchResult  == null || this.state.searchResult[0] == null ? <div /> : <div className="">
-                        <div className="grid">
+                        <div className="cards">
                             {this.state.searchResult.map(m =>
-                                <div key={m.imdbID} className="grid_item_inside" onClick={() => this.handleClick(m.Title)}>
+                                <div key={m.imdbID} className="movieCard" onClick={() => this.handleClick(m.Title)}>
                                     
-                               {m.Poster == 'N/A' ?<div className="nonImg" />: <img src={m.Poster} width="200px" height="200px"></img>}
+                               {m.Poster == 'N/A' ?<div className="mImg"  />: <img src={m.Poster} className="mImg"></img>}
                                 <div>
                                    <h5> {m.Title}</h5>
                                 </div>

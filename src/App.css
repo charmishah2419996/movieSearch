@@ -1,14 +1,10 @@
-.grid {
-  overflow: scroll;
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-row-gap: 20px;
-  grid-column-gap: 20px;
-  }
-  .grid_item_inside{
-    margin-right: 10px;
+
+  
+  .movieCard{
     cursor: pointer;
-    padding: 10px;
+    
+    width: 100%;
+    height: 100%;
   }
   .btn{
     margin: 10px;
@@ -21,7 +17,7 @@
   }
   .alignTitleip{
     padding: 6px 15px;
-    width: 500px;
+    /* width: 500px; */
   }
   .pagination{
     
@@ -29,8 +25,33 @@
     justify-content: center;
 
   }
-  .nonImg{
-    width: 200px;
-    height: 200px;
+  .mImg{
+    width: 100%;
+    height: 70%;
+    object-fit: fill;
+  }
+
+  .cards {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+  }
+
+  @media (min-width: 600px) {
+    .cards { grid-template-columns: repeat(2, 1fr)
+    
+    }
+    .movieCard{
+      width: 200px;
+      height: 150px;
+    }
+  }
+  @media (min-width: 900px) {
+    .cards { grid-template-columns: repeat(4, 1fr); }
+    .movieCard{
+      width: 250px;
+      height: 200px;
+    }
   }
   
